@@ -6,7 +6,7 @@ import styled from "styled-components";
 const SearchResultComponent: FC<HitsProvided<ICompanyDoc>> = (searchData) => {
     return (
         <SearchResultWrapper>
-            { searchData.hits.map((hit) => <SearchResultItem key={hit.objectID} data={hit} />) }
+            <ul>{ searchData.hits.map((hit) => <SearchResultItem key={hit.objectID} data={hit} />) }</ul>
         </SearchResultWrapper>
     )
 }
