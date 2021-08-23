@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Hit } from "react-instantsearch-core";
 import Image from "next/image";
 import styled from "styled-components";
-import { Badge } from "./Badge";
+import { Badge } from "../../../components/Badge";
 import { faCompass } from "@fortawesome/free-solid-svg-icons";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faCoins } from "@fortawesome/free-solid-svg-icons";
