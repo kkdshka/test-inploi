@@ -12,7 +12,7 @@ const searchClient = algoliasearch(
 
 export const Search = () => {
   const [searchState, setSearchState] = useState<SearchState>({
-    query: "Random query",
+    query: "",
   });
 
   return (
@@ -26,7 +26,7 @@ export const Search = () => {
         }}
       >
         <CustomSearchBox />
-        {searchState!.query!.length ? <SearchResults /> : <div>No data</div>}
+        {searchState!.query!.length ? <SearchResults /> : <div/>}
       </InstantSearch>
     </Fragment>
   );
