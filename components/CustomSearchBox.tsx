@@ -40,20 +40,21 @@ const Input = styled.input`
     font-weight: bold;
     color: #8e8e8e;
   }
-`
+`;
 
 const Button = styled.button`
-  background-color: #0045FF;
+  background-color: #0045ff;
   font-size: 22px;
   font-weight: bold;
   color: white;
   padding: 1em 1.5em;
   border-radius: 20px;
   border: none;
+
   &:hover {
     cursor: pointer;
   }
-`
+`;
 
 const SearchContainer = styled.div`
   width: 80%;

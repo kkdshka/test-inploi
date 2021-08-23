@@ -5,12 +5,12 @@ export const H1 = styled.h1`
   color: white;
   margin: 2em;
   font-size: 50px;
-`
+`;
 
 type Props = {
-    children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
-export const Header = ({children}: Props) => {
-    return <H1>{children}</H1>
-}
+export const Header = ({ children }: Props) => {
+  return <H1>{children}</H1>;
+};
