@@ -14,8 +14,10 @@ const SearchResultComponent: FC<HitsProvided<ICompanyDoc>> = (searchData) => {
 export const SearchResults = connectHits(SearchResultComponent);
 
 const SearchResultWrapper = styled.div`
-    background-color: white;
+    //background-color: white;
     margin: 2em;
-    width: 25%;
+    width: 80%;
     border-radius: 20px;
+    height: 40vh;
+    overflow: auto;
 `
