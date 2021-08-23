@@ -7,7 +7,7 @@ import { faCompass } from "@fortawesome/free-solid-svg-icons";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faCoins } from "@fortawesome/free-solid-svg-icons";
 
-const IMAGES_SIZE: number = 150;
+const IMAGES_SIZE: number = 60;
 
 type DataCompany = {
   company_id: number;
@@ -73,6 +73,7 @@ export const SearchResultItem: FC<IProps> = ({ data }) => {
         <Badge icon={faBriefcase} text={data.data_job.job_type} />
         <Badge icon={faCoins} text={data.data_job.job_wage_type} />
       </BadgesWrapper>
+      <hr />
       <Button>View Job</Button>
     </SearchResultItemWrapper>
   );
@@ -86,6 +87,13 @@ const SearchResultItemWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  > hr {
+    width: 100%;
+    border: solid 1px lightgray;
+    margin: 13px 0;
+    border-radius: 10px;
+  }
 `;
 
 const HeaderWrapper = styled.div`
@@ -110,7 +118,7 @@ const BadgesWrapper = styled.div`
 
 const Button = styled.button`
   background-color: #0045ff;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   color: white;
   padding: 0.75em 1em;

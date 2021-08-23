@@ -1,8 +1,9 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch } from "react-instantsearch-dom";
 import { CustomSearchBox } from "./CustomSearchBox";
 import { SearchResults } from "./SearchResults";
+import { SearchState } from "react-instantsearch-core";
 
 const searchClient = algoliasearch(
   process.env.appId as string,
@@ -10,14 +11,22 @@ const searchClient = algoliasearch(
 );
 
 export const Search = () => {
+  const [searchState, setSearchState] = useState<SearchState>({
+    query: "Random query",
+  });
+
   return (
     <Fragment>
       <InstantSearch
         indexName={process.env.indexName as string}
         searchClient={searchClient}
+        searchState={searchState}
+        onSearchStateChange={(newSearchState) => {
+          setSearchState(newSearchState);
+        }}
       >
         <CustomSearchBox />
-        <SearchResults />
+        {searchState!.query!.length ? <SearchResults /> : <div>No data</div>}
       </InstantSearch>
     </Fragment>
   );

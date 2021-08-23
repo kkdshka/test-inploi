@@ -16,7 +16,7 @@ const SearchBox: FC<SearchBoxProvided> = ({ refine }) => {
   return (
     <SearchContainer>
       <Input
-        type="search"
+        type="text"
         value={searchQuery}
         onChange={handleSearchChange}
         placeholder={"Search for anything..."}
