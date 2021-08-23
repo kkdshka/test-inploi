@@ -28,4 +28,3 @@ const BadgeWrapper = styled.div`
 const TextWrapper = styled.span`
   margin-left: 0.5em;
 `;
-
